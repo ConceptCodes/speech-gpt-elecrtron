@@ -1,7 +1,7 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import App from '$components/App';
-import '$styles/app.scss';
+import '$renderer/styles/globals.css';
 
 // Say something
 console.log('[EVite] : renderer executed');

@@ -33,6 +33,8 @@
       "$assets": ["./assets"],
       "$assets/*": ["./assets/*"],
       "$components": ["./src/renderer/components"],
+      "$lib": ["./src/renderer/lib"],
+      "$lib/": ["./src/renderer/lib/"],
       "$components/*": ["./src/renderer/components/*"],
       "$styles": ["./src/renderer/styles"],
       "$styles/*": ["./src/renderer/styles/*"]

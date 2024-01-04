@@ -1,4 +1,4 @@
-# ElectroVite, React apps with Electron & ViteJS
+# Speech GPT, React apps with Electron & ViteJS
 
 A prebuilt project for creating desktop apps using Electron, React, ViteJS with blazing fast hot-reload, easy to use custom import aliases & executable builds for distribution.
 
@@ -36,7 +36,7 @@ A prebuilt project for creating desktop apps using Electron, React, ViteJS with 
 Clone the repository:
 
 ```bash
-git clone https://github.com/guasam/electrovite-react
+git clone https://github.com/guasam/Speech GPT-react
 ```
 
 <br />

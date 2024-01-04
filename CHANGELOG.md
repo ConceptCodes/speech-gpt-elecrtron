@@ -1,4 +1,4 @@
-# ElectroVite Changelog
+# Speech GPT Changelog
 
 ### v1.2.0
 

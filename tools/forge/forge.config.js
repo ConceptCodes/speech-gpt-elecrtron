@@ -5,8 +5,8 @@ const rootDir = process.cwd();
 module.exports = {
   packagerConfig: {
     asar: false,
-    executableName: 'ElectroVite',
-    appCopyright: 'Copyright (C) 2023 Guasam, ElectroVite',
+    executableName: 'Speech GPT',
+    appCopyright: 'Copyright (C) 2023 Guasam, Speech GPT',
     icon: path.resolve('assets/favicon.ico'),
   },
   rebuildConfig: {},

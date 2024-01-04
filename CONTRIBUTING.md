@@ -1,4 +1,4 @@
-# Contributing to ElectroVite (React)
+# Contributing to Speech GPT (React)
 
 Thank you for investing your time in contributing to our project!
 

@@ -1,5 +1,6 @@
 import { app, BrowserWindow } from 'electron';
 import path from 'path';
+import fs from 'fs';
 
 /** Handle creating/removing shortcuts on Windows when installing/uninstalling. */
 if (require('electron-squirrel-startup')) {
@@ -56,7 +57,7 @@ app.on('window-all-closed', () => {
 
 function createMainWindow() {
   mainWindow = new BrowserWindow({
-    width: 860,
+    width: 1000,
     height: 600,
     backgroundColor: '#202020',
     show: false,
@@ -71,6 +72,22 @@ function createMainWindow() {
       sandbox: false,
     },
   });
+
+  const assetsPath = path.join(__dirname, 'tmp');
+  
+  if (!fs.existsSync(assetsPath)) {
+    fs.mkdirSync(assetsPath);
+  }
+
+  const scriptsPath = path.join(assetsPath, 'scripts');
+  if (!fs.existsSync(scriptsPath)) {
+    fs.mkdirSync(scriptsPath);
+  }
+
+  const storePath = path.join(assetsPath, 'store');
+  if (!fs.existsSync(storePath)) {
+    fs.mkdirSync(storePath);
+  }
 
   // Load the index.html of the app window.
   if (MAIN_WINDOW_VITE_DEV_SERVER_URL) {
