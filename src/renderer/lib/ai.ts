@@ -23,9 +23,9 @@ export class AI {
   private vectorStore: any;
   private memory: BufferMemory;
 
-  constructor() {
+  constructor(apiKey: string) {
     this.model = new ChatOpenAI({
-      openAIApiKey: process.env.OPEN_AI_API_KEY,
+      openAIApiKey: apiKey,
     });
     this.vectorStore = null;
     this.memory = new BufferMemory({

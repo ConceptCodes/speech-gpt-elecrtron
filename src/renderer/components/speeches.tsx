@@ -1,5 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader } from './ui/card';
-import useStore from '$renderer/hooks/useState';
+import useStore from '$renderer/hooks/useStore';
 
 export const Speeches = () => {
   const { speeches } = useStore();

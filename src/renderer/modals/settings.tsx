@@ -1,4 +1,4 @@
-import { Settings2 } from 'lucide-react';
+import { Settings } from 'lucide-react';
 
 import { Button } from '$renderer/components/ui/button';
 import {
@@ -12,23 +12,29 @@ import {
 } from '$renderer/components/ui/dialog';
 import { Label } from '$renderer/components/ui/label';
 import { Input } from '$renderer/components/ui/input';
-import useStore from '$renderer/hooks/useState';
+import useStore from '$renderer/hooks/useStore';
+import { useToast } from '$renderer/hooks/useToast';
 
 export default function SettingsModal() {
   const { setApiKey, apiKey } = useStore();
+  const { toast } = useToast();
 
   const handleSave = (val: string) => {
     setApiKey(val);
+    toast({
+      title: 'API Key Saved',
+      description: 'Your API key has been saved.',
+    });
   };
 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Settings2 />
+        <Settings />
       </DialogTrigger>
       <DialogContent className='sm:max-w-[425px]'>
         <DialogHeader>
-          <DialogTitle>Set API Key</DialogTitle>
+          <DialogTitle>Settings</DialogTitle>
           <DialogDescription>
             Enter your API key below and click save when you're done.
           </DialogDescription>

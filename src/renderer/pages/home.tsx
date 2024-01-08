@@ -8,8 +8,8 @@ const Home = () => {
   return (
     <section className='flex flex-col gap-10 px-4 py-6 md:px-8 md:py-12'>
       <div className='flex flex-row-reverse items-center gap-4'>
-        <Button onClick={handleUpload}>Upload</Button>
         <SettingsModal />
+        <Button onClick={handleUpload}>Upload</Button>
       </div>
       <main className='flex flex-col gap-10 md:gap-20'>
         <div className='flex flex-col gap-4 md:gap-6'>
