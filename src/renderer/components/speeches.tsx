@@ -1,18 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader } from './ui/card';
+import useStore from '$renderer/hooks/useState';
 
-export type ISpeech = {
-  id: string;
-  title: string;
-  text: string;
-  date: string;
-};
+export const Speeches = () => {
+  const { speeches } = useStore();
 
-interface ISpeechesProps {
-  speeches: Array<ISpeech>;
-}
-
-export const Speeches = (props: ISpeechesProps) => {
-  if (props.speeches.length === 0) {
+  if (speeches?.length === 0 || !speeches) {
     return (
       <div className='flex h-[300px] w-full flex-col items-center justify-center gap-4 rounded-lg border border-dashed'>
         <h2 className='text-xl font-bold'>No Speeches Found</h2>
@@ -25,7 +17,7 @@ export const Speeches = (props: ISpeechesProps) => {
 
   return (
     <section className='grid grid-cols-1 md:grid-cols-2 gap-8'>
-      {props.speeches.map((speech) => (
+      {speeches?.map((speech) => (
         <Card key={speech.id}>
           <CardHeader>{speech.title}</CardHeader>
           <CardContent className='flex flex-col gap-2'>
